@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
 import net.bytebuddy.asm.Advice.This;
 
 @SpringBootApplication
@@ -27,8 +26,10 @@ public class JdbcToJpaApplication implements CommandLineRunner {
 		logger.info("All Users -> {}",	dao.findAll());
 		logger.info("specfic User by ID 1 -> {} ",	dao.findbyId(1));
 		logger.info("users by LOcation -> {} ",	dao.findbylocation("Amman"));
-	//	logger.info("users by name -> {} ",	dao.findbyname("Bashar"));
-	//	logger.info("users by Date -> {} ",	dao.findbylocation("Bashar"));
+		logger.info("users by name -> {} ",	dao.findbyname("bashar"));
+	
+		
+	
 	}
 
 }

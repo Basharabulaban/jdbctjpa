@@ -1,5 +1,6 @@
 package com.densin.rws.jdbctojpa;
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,11 +38,13 @@ public class PersonJdbcDao{
 		}
 	public List<Person> findbyname(String name){
 		return	jdbcTemplate.query
-				("select * from person where location=?", new Object[] {name},
+				("select * from person where name=?", new Object[] {name},
 						new BeanPropertyRowMapper<Person>(Person.class) ) ;
 				
 			
 		}
+
+
 	
 	
 }
