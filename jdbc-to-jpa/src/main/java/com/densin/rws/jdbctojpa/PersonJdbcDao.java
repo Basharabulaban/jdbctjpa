@@ -35,4 +35,13 @@ public class PersonJdbcDao{
 				
 			
 		}
+	public List<Person> findbyname(String name){
+		return	jdbcTemplate.query
+				("select * from person where location=?", new Object[] {name},
+						new BeanPropertyRowMapper<Person>(Person.class) ) ;
+				
+			
+		}
+	
+	
 }

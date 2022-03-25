@@ -25,8 +25,10 @@ public class JdbcToJpaApplication implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 	
 		logger.info("All Users -> {}",	dao.findAll());
-		logger.info("userid 1 -> {} ",	dao.findbyId(1));
-		logger.info("users by -> {} ",	dao.findbylocation("Amman"));
+		logger.info("specfic User by ID 1 -> {} ",	dao.findbyId(1));
+		logger.info("users by LOcation -> {} ",	dao.findbylocation("Amman"));
+	//	logger.info("users by name -> {} ",	dao.findbyname("Bashar"));
+	//	logger.info("users by Date -> {} ",	dao.findbylocation("Bashar"));
 	}
 
 }
