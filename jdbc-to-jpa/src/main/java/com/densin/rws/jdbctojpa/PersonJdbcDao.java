@@ -44,6 +44,17 @@ public class PersonJdbcDao{
 			
 		}
 
+	public int deletebyname(String name) {
+	
+		return jdbcTemplate.update
+				("delete from person where name=?", new Object[] {name} ) ;
+	}
+
+	public Object deleteby_ID_name(int id, String name) {
+		return jdbcTemplate.update
+				("delete from person where id =? and name=?", new Object[] {id,name} ) ;
+	}
+
 
 	
 	

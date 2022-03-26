@@ -27,9 +27,10 @@ public class JdbcToJpaApplication implements CommandLineRunner {
 		logger.info("specfic User by ID 1 -> {} ",	dao.findbyId(1));
 		logger.info("users by LOcation -> {} ",	dao.findbylocation("Amman"));
 		logger.info("users by name -> {} ",	dao.findbyname("bashar"));
-	
-		
-	
+		logger.info("number of ROWS DELETED -> - {} ",		dao.deletebyname("bashar"));
+		logger.info("users by name -> {} ",	dao.findbyname("bashar"));
+		logger.info("delete name based on id and name -> - ",	dao.deleteby_ID_name(2,"Ahmad"));
+		logger.info("All Users -> {}",	dao.findAll());
 	}
 
 }
