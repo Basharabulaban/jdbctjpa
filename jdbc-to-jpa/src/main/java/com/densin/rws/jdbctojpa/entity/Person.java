@@ -3,6 +3,7 @@ package com.densin.rws.jdbctojpa.entity;
 import java.util.Date;
 
 public class Person {
+
 private int id;
 private String name;
 private String location;

@@ -1,6 +1,5 @@
 package com.densin.rws.jdbctojpa;
 
-
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Timestamp;
@@ -36,7 +35,7 @@ public class PersonJdbcDao{
 		}
 		
 	}
-	// you can chnage new BeanPropertyRowMapper<Person>(Person.class)        with       new PersonRowMapper()
+	// you can chnage new BeanPropertyRowMapper<Person>(Person.class)    with       new PersonRowMapper()
 	//select * from person
 	public List<Person> findAll(){
 	return	jdbcTemplate.query("select * from person",new PersonRowMapper());
